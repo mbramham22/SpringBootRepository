@@ -25,6 +25,7 @@ public class StudentController
     @RequestMapping(value="/getStudent/{id}", method = RequestMethod.GET)
     public Student getStudentById(@PathVariable long id)
     {
+		System.out.println("id:"+id);
         return studentRepository.findOne(id);
     }
     
